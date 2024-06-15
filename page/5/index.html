@@ -154,6 +154,63 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/01/22/%E5%B0%8F%E5%B8%B8%E8%AF%86-Android-SDK%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/">
+        小常识-Android SDK环境变量配置
+      </a>
+    </h2>
+    
+    <time>
+      1月 22, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/%E5%B8%B8%E8%AF%86/">常识</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ul>
+<li>我的电脑<ul>
+<li>属性<ul>
+<li>高级系统设置<ul>
+<li>环境变量<ul>
+<li>系统环境变量<ul>
+<li>新建</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ANDROID_HOME</span><br><span class="line">  </span><br><span class="line">//sdk绝对路径</span><br><span class="line">E:\Android\SDK</span><br></pre></td></tr></table></figure>
+<pre><code>                - 找到Path环境变量,追加如下内容
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools;</span><br></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/%E5%B8%B8%E8%AF%86/">常识</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/01/19/%E5%B0%8F%E5%B8%B8%E8%AF%86-Android-Studio%E4%B8%8A%E4%BC%A0library%E5%88%B0jitpack%E5%B9%B6%E5%B8%A6%E6%9C%89%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A/">
         小常识-Android Studio上传library到jitpack并带有中文文档注释
       </a>
@@ -550,47 +607,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/12/28/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-SlidingValidationView/">
-        Android自定义控件-SlidingValidationView
-      </a>
-    </h2>
-    
-    <time>
-      12月 28, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/">Android自定义控件</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="/../../../../images/SlidingValidation.gif" alt="图2"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">declare-styleable</span> <span class="attr">name</span>=<span class="string">&quot;SlidingValidationView&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">&quot;sv_drag_view_color&quot;</span> <span class="attr">format</span>=<span class="string">&quot;color|reference&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">&quot;sv_line_color&quot;</span> <span class="attr">format</span>=<span class="string">&quot;color|reference&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">&quot;sv_final_point_color&quot;</span> <span class="attr">format</span>=<span class="string">&quot;color|reference&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">&quot;sv_sliding_progress&quot;</span> <span class="attr">format</span>=<span class="string">&quot;integer&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">&quot;sv_draw_radius&quot;</span> <span class="attr">format</span>=<span class="string">&quot;dimension|reference&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">&quot;sv_final_point_radius&quot;</span> <span class="attr">format</span>=<span class="string">&quot;dimension|reference&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">&quot;sv_line_point_radius&quot;</span> <span class="attr">format</span>=<span class="string">&quot;dimension|reference&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">declare-styleable</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/12/28/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-SlidingValidationView/">查看更多</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -659,7 +675,7 @@
     
         <li><a class="flat-box" href="/categories/Java%E5%B7%A5%E5%85%B7%E7%B1%BB/"><div class='name'>Java工具类</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Linux/"><div class='name'>Linux</div><div class='badget'>1</div></a></li>
+        <li><a class="flat-box" href="/categories/Linux/"><div class='name'>Linux</div><div class='badget'>2</div></a></li>
     
         <li><a class="flat-box" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badget'>1</div></a></li>
     
@@ -700,7 +716,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 15px; color: #6b6b6b">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 15px; color: #6b6b6b">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/MySQL-JavaEE/" style="font-size: 14px; color: #808080">MySQL - JavaEE</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 16px; color: #555">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/%E5%B8%B8%E8%AF%86/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/" style="font-size: 16px; color: #555">网页前端</a>
+        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 15px; color: #6b6b6b">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 15px; color: #6b6b6b">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 15px; color: #6b6b6b">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/MySQL-JavaEE/" style="font-size: 14px; color: #808080">MySQL - JavaEE</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 16px; color: #555">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/%E5%B8%B8%E8%AF%86/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/" style="font-size: 16px; color: #555">网页前端</a>
     </div>
 </div>
 

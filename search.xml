@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Linux-服务器SSH连接和文件管理</title>
+      <link href="/2024/06/15/Linux-%E6%9C%8D%E5%8A%A1%E5%99%A8SSH%E8%BF%9E%E6%8E%A5%E5%92%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/"/>
+      <url>/2024/06/15/Linux-%E6%9C%8D%E5%8A%A1%E5%99%A8SSH%E8%BF%9E%E6%8E%A5%E5%92%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>重装系统老是忘记常用工具的下载地址，干脆记录一下</p></blockquote><h2 id="一、Windows-系统"><a href="#一、Windows-系统" class="headerlink" title="一、Windows 系统"></a>一、Windows 系统</h2><h2 id="1-SSH登录"><a href="#1-SSH登录" class="headerlink" title="1. SSH登录"></a>1. SSH登录</h2><p>下载<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">putty</a></p><h2 id="2-文件管理"><a href="#2-文件管理" class="headerlink" title="2. 文件管理"></a>2. 文件管理</h2><p>下载<a href="https://filezilla-project.org/download.php?type=client">filezilla</a></p><h2 id="二、MacOS"><a href="#二、MacOS" class="headerlink" title="二、MacOS"></a>二、MacOS</h2><h2 id="1-SSH登录-1"><a href="#1-SSH登录-1" class="headerlink" title="1. SSH登录"></a>1. SSH登录</h2><p>直接使用终端-Shell-新建远程连接。</p><h2 id="2-文件管理-1"><a href="#2-文件管理-1" class="headerlink" title="2. 文件管理"></a>2. 文件管理</h2><p>可以去APP Store下载一个<code>ForkLift</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>InteliJ IDEA 破解版安装教程</title>
       <link href="/2024/06/13/InteliJ-IDEA-%E7%A0%B4%E8%A7%A3%E7%89%88%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
       <url>/2024/06/13/InteliJ-IDEA-%E7%A0%B4%E8%A7%A3%E7%89%88%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
