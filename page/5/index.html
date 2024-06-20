@@ -154,6 +154,67 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/01/22/%E5%B0%8F%E5%B8%B8%E8%AF%86-JDK%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/">
+        小常识-JDK环境变量配置
+      </a>
+    </h2>
+    
+    <time>
+      1月 22, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/%E5%B8%B8%E8%AF%86/">常识</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ul>
+<li>我的电脑<ul>
+<li>属性<ul>
+<li>高级系统设置<ul>
+<li>环境变量<ul>
+<li>系统环境变量<ul>
+<li>新建</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME</span><br><span class="line">  </span><br><span class="line">//jdk绝对路径</span><br><span class="line">C:\Program Files\Java\jdk1.8.0_60</span><br></pre></td></tr></table></figure>
+<pre><code>                - 新建
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CLASSPATH</span><br><span class="line">  </span><br><span class="line">.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;</span><br></pre></td></tr></table></figure>
+<pre><code>                - 找到Path环境变量,追加如下内容
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</span><br></pre></td></tr></table></figure>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/%E5%B8%B8%E8%AF%86/">常识</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/01/22/%E5%B0%8F%E5%B8%B8%E8%AF%86-Android-SDK%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/">
         小常识-Android SDK环境变量配置
       </a>
@@ -571,42 +632,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/01/04/%E5%B0%8F%E5%B8%B8%E8%AF%86-Android%E6%A1%8C%E9%9D%A2Logo%E5%B0%BA%E5%AF%B8%E8%A6%81%E6%B1%82/">
-        小常识-Android桌面Logo尺寸要求
-      </a>
-    </h2>
-    
-    <time>
-      1月 4, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/%E5%B8%B8%E8%AF%86/">常识</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="Android-Icon-Size-and-Location-for-Apps"><a href="#Android-Icon-Size-and-Location-for-Apps" class="headerlink" title="Android Icon Size and Location for Apps"></a>Android Icon Size and Location for Apps</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DENSITY   SIZE      LOCATION            RATIO    SCREEN     MARGIN</span><br><span class="line">XXXHDPI   192×192   drawable-xxxhdpi    4        640 DPI    12 to 16 pixels</span><br><span class="line">XXHDPI    144×144   drawable-xxhdpi     3        480 DPI    8 to 12 pixels</span><br><span class="line">XHDPI     96×96     drawable-xhdpi      2        320 DPI    6 to 8 pixels</span><br><span class="line">HDPI      72×72     drawable-hdpi       1.5      240 DPI    4 to 6 pixels</span><br><span class="line">MDPI      48×48     drawable-mdpi       1        160 DPI    3 to 4 pixels</span><br><span class="line">MDPI      48×48     drawable (Cupcake)  1        160 DPI    3 to 4 pixels</span><br><span class="line">LDPI      36×36     drawable-ldpi       0.75     120 DPI    2 to 3 pixels</span><br><span class="line">NA        512×512   Google Play         NA       NA         As required</span><br></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/%E5%B8%B8%E8%AF%86/">常识</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -675,7 +700,7 @@
     
         <li><a class="flat-box" href="/categories/Java%E5%B7%A5%E5%85%B7%E7%B1%BB/"><div class='name'>Java工具类</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Linux/"><div class='name'>Linux</div><div class='badget'>2</div></a></li>
+        <li><a class="flat-box" href="/categories/Linux/"><div class='name'>Linux</div><div class='badget'>3</div></a></li>
     
         <li><a class="flat-box" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badget'>1</div></a></li>
     
@@ -716,7 +741,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 15px; color: #6b6b6b">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 15px; color: #6b6b6b">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 15px; color: #6b6b6b">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/MySQL-JavaEE/" style="font-size: 14px; color: #808080">MySQL - JavaEE</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 16px; color: #555">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/%E5%B8%B8%E8%AF%86/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/" style="font-size: 16px; color: #555">网页前端</a>
+        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 15px; color: #6b6b6b">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 15px; color: #6b6b6b">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 16px; color: #555">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/MySQL-JavaEE/" style="font-size: 14px; color: #808080">MySQL - JavaEE</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 16px; color: #555">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/%E5%B8%B8%E8%AF%86/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/" style="font-size: 16px; color: #555">网页前端</a>
     </div>
 </div>
 

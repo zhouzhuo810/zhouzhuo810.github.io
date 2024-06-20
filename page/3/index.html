@@ -154,6 +154,46 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/04/13/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E8%87%AA%E5%AE%9A%E4%B9%89RecyclerView%E7%9A%84LayoutManager/">
+        Android疑难杂症-自定义RecyclerView的LayoutManager
+      </a>
+    </h2>
+    
+    <time>
+      4月 13, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="禁用RecyclerView手动滑动功能；"><a href="#禁用RecyclerView手动滑动功能；" class="headerlink" title="禁用RecyclerView手动滑动功能；"></a>禁用RecyclerView手动滑动功能；</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PlanDateRecyclerView</span> <span class="keyword">extends</span> <span class="title class_">RecyclerView</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PlanDateRecyclerView</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(context);</span><br><span class="line">        init();</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PlanDateRecyclerView</span><span class="params">(Context context, <span class="meta">@Nullable</span> AttributeSet attrs)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(context, attrs);</span><br><span class="line">        init();</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PlanDateRecyclerView</span><span class="params">(Context context, <span class="meta">@Nullable</span> AttributeSet attrs, <span class="type">int</span> defStyle)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(context, attrs, defStyle);</span><br><span class="line">        init();</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">()</span> &#123;</span><br><span class="line">        setOnTouchListener(<span class="keyword">new</span> <span class="title class_">OnTouchListener</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">onTouch</span><span class="params">(View v, MotionEvent event)</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2018/04/13/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E8%87%AA%E5%AE%9A%E4%B9%89RecyclerView%E7%9A%84LayoutManager/">查看更多</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/04/13/Android%E7%96%91%E9%9A%BE%E6%9D%82%E8%AF%81-%E8%A7%A3%E5%86%B3ViewPager%E5%92%8CFragment%E4%B8%AD%E6%B0%B4%E5%B9%B3%E6%BB%91%E5%8A%A8%E6%8E%A7%E4%BB%B6%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98/">
         Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题
       </a>
@@ -540,46 +580,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/02/08/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-EditText%E5%90%84%E7%A7%8D%E6%A0%B7%E5%BC%8F%E8%83%8C%E6%99%AF/">
-        Android常用代码-EditText各种样式背景
-      </a>
-    </h2>
-    
-    <time>
-      2月 8, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h1 id="底部变色直线"><a href="#底部变色直线" class="headerlink" title="底部变色直线"></a>底部变色直线</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">selector</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:bottom</span>=<span class="string">&quot;1px&quot;</span> <span class="attr">android:state_focused</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">layer-list</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">item</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">&quot;@color/colorPrimary&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:bottom</span>=<span class="string">&quot;1px&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">&quot;@android:color/white&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">layer-list</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:bottom</span>=<span class="string">&quot;1px&quot;</span> <span class="attr">android:state_pressed</span>=<span class="string">&quot;false&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">layer-list</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">item</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">&quot;#ddd&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:bottom</span>=<span class="string">&quot;1px&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">&quot;@android:color/white&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">layer-list</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">selector</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2018/02/08/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-EditText%E5%90%84%E7%A7%8D%E6%A0%B7%E5%BC%8F%E8%83%8C%E6%99%AF/">查看更多</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -648,7 +648,7 @@
     
         <li><a class="flat-box" href="/categories/Java%E5%B7%A5%E5%85%B7%E7%B1%BB/"><div class='name'>Java工具类</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Linux/"><div class='name'>Linux</div><div class='badget'>2</div></a></li>
+        <li><a class="flat-box" href="/categories/Linux/"><div class='name'>Linux</div><div class='badget'>3</div></a></li>
     
         <li><a class="flat-box" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badget'>1</div></a></li>
     
@@ -689,7 +689,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 15px; color: #6b6b6b">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 15px; color: #6b6b6b">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 15px; color: #6b6b6b">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/MySQL-JavaEE/" style="font-size: 14px; color: #808080">MySQL - JavaEE</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 16px; color: #555">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/%E5%B8%B8%E8%AF%86/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/" style="font-size: 16px; color: #555">网页前端</a>
+        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 15px; color: #6b6b6b">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 15px; color: #6b6b6b">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 16px; color: #555">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/MySQL-JavaEE/" style="font-size: 14px; color: #808080">MySQL - JavaEE</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 16px; color: #555">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/%E5%B8%B8%E8%AF%86/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/" style="font-size: 16px; color: #555">网页前端</a>
     </div>
 </div>
 

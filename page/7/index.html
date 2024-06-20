@@ -154,6 +154,56 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/12/07/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E5%A4%9A%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85/">
+        Android签名打包-多渠道打包
+      </a>
+    </h2>
+    
+    <time>
+      12月 7, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85/">Android签名打包</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="复制libs"><a href="#复制libs" class="headerlink" title="复制libs"></a>复制libs</h3><ul>
+<li>common</li>
+<li>analytics</li>
+</ul>
+<h3 id="集成友盟-App统计功能"><a href="#集成友盟-App统计功能" class="headerlink" title="集成友盟+ App统计功能"></a>集成友盟+ App统计功能</h3><p>在Application的onCreate方法中调用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 初始化common库</span></span><br><span class="line"><span class="comment"> * 参数1:上下文，不能为空</span></span><br><span class="line"><span class="comment"> * 参数2:设备类型，UMConfigure.DEVICE_TYPE_PHONE为手机、UMConfigure.DEVICE_TYPE_BOX为盒子，默认为手机</span></span><br><span class="line"><span class="comment"> * 参数3:Push推送业务的secret</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    UMConfigure.init(<span class="built_in">this</span>, UMConfigure.DEVICE_TYPE_PHONE, <span class="string">&quot;你的appID&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="添加相应权限"><a href="#添加相应权限" class="headerlink" title="添加相应权限"></a>添加相应权限</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 必须的权限 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_WIFI_STATE&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.READ_PHONE_STATE&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.INTERNET&quot;</span> /&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="comment">&lt;!-- 推荐的权限 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 添加如下权限，以便使用更多的第三方SDK和更精准的统计数据 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.CHANGE_WIFI_STATE&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="配置渠道"><a href="#配置渠道" class="headerlink" title="配置渠道"></a>配置渠道</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">manifest</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">application</span> ……&gt;</span></span><br><span class="line">        ……</span><br><span class="line">        <span class="comment">&lt;!--umeng start--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:value</span>=<span class="string">&quot;你的AppID&quot;</span> <span class="attr">android:name</span>=<span class="string">&quot;UMENG_APPKEY&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:value</span>=<span class="string">&quot;$&#123;UMENG_CHANNEL_VALUE&#125;&quot;</span> <span class="attr">android:name</span>=<span class="string">&quot;UMENG_CHANNEL&quot;</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--umeng end--&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="代码混淆"><a href="#代码混淆" class="headerlink" title="代码混淆"></a>代码混淆</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keep class com.umeng.commonsdk.** &#123;*;&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="多渠道配置"><a href="#多渠道配置" class="headerlink" title="多渠道配置"></a>多渠道配置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    productFlavors &#123;</span><br><span class="line">        wandoujia &#123;&#125;</span><br><span class="line">        yingyongbao &#123;&#125;</span><br><span class="line">        c360 &#123;&#125;</span><br><span class="line">        kq &#123;&#125;</span><br><span class="line">        productFlavors.all &#123; flavor -&gt;</span><br><span class="line">            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    applicationVariants.all &#123; variant -&gt;</span><br><span class="line">        variant.outputs.each &#123; output -&gt;</span><br><span class="line">            def outputFile = output.outputFile</span><br><span class="line">            def fileName</span><br><span class="line">            def flavor = productFlavors.name;</span><br><span class="line">            if (outputFile != null &amp;&amp; outputFile.name.endsWith(&#x27;.apk&#x27;)) &#123;</span><br><span class="line">                if (variant.buildType.name.equals(&#x27;release&#x27;)) &#123;</span><br><span class="line">                    fileName = &quot;名字_$&#123;defaultConfig.versionName&#125;_$&#123;flavor&#125;.apk&quot;</span><br><span class="line">                &#125; else if (variant.buildType.name.equals(&#x27;debug&#x27;)) &#123;</span><br><span class="line">                    fileName = &quot;名字_$&#123;defaultConfig.versionName&#125;_debug_$&#123;flavor&#125;.apk&quot;</span><br><span class="line">                &#125;</span><br><span class="line">                output.outputFile = new File(outputFile.parent, fileName)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/11/21/AndroidStudio%E6%8A%80%E5%B7%A7-Terminal%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/">
         AndroidStudio技巧-Terminal权限问题
       </a>
@@ -528,47 +578,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/17/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E5%BE%AE%E4%BF%A1QQ%E5%88%86%E4%BA%AB%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E5%AD%97/">
-        Android常用代码-微信QQ分享文件
-      </a>
-    </h2>
-    
-    <time>
-      10月 17, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>不使用SDK实现QQ和微信文件与文字的分享。</p>
-<h3 id="QQ分享文件"><a href="#QQ分享文件" class="headerlink" title="QQ分享文件"></a>QQ分享文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">private void shareFileToQQ(File file) throws Exception&#123;</span><br><span class="line">    Intent share = new Intent(Intent.ACTION_SEND);</span><br><span class="line">    ComponentName component = new ComponentName(&quot;com.tencent.mobileqq&quot;, &quot;com.tencent.mobileqq.activity.JumpActivity&quot;);</span><br><span class="line">    share.setComponent(component);</span><br><span class="line">    Uri uri = null;</span><br><span class="line">    if (Build.VERSION.SDK_INT &gt; 23) &#123;</span><br><span class="line">        uri = FileProvider.getUriForFile(getActivity(),</span><br><span class="line">                BuildConfig.APPLICATION_ID + &quot;.provider&quot;,</span><br><span class="line">                file);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        uri = Uri.fromFile(file);</span><br><span class="line">    &#125;</span><br><span class="line">    share.putExtra(Intent.EXTRA_STREAM, uri);</span><br><span class="line">    share.setType(&quot;*/*&quot;);</span><br><span class="line">    startActivity(Intent.createChooser(share, &quot;发送&quot;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/10/17/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E5%BE%AE%E4%BF%A1QQ%E5%88%86%E4%BA%AB%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E5%AD%97/">查看更多</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -637,7 +646,7 @@
     
         <li><a class="flat-box" href="/categories/Java%E5%B7%A5%E5%85%B7%E7%B1%BB/"><div class='name'>Java工具类</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Linux/"><div class='name'>Linux</div><div class='badget'>2</div></a></li>
+        <li><a class="flat-box" href="/categories/Linux/"><div class='name'>Linux</div><div class='badget'>3</div></a></li>
     
         <li><a class="flat-box" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badget'>1</div></a></li>
     
@@ -678,7 +687,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 15px; color: #6b6b6b">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 15px; color: #6b6b6b">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 15px; color: #6b6b6b">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/MySQL-JavaEE/" style="font-size: 14px; color: #808080">MySQL - JavaEE</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 16px; color: #555">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/%E5%B8%B8%E8%AF%86/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/" style="font-size: 16px; color: #555">网页前端</a>
+        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 15px; color: #6b6b6b">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 15px; color: #6b6b6b">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 16px; color: #555">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/MySQL-JavaEE/" style="font-size: 14px; color: #808080">MySQL - JavaEE</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 16px; color: #555">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/%E5%B8%B8%E8%AF%86/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/" style="font-size: 16px; color: #555">网页前端</a>
     </div>
 </div>
 
